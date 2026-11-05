@@ -36,11 +36,22 @@ public class Methods {
             return biggerOfBC;
         }
     }
+    static boolean isPrime(int n) {
+        if (n < 2) {
+            return false;
+        }
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     public static void main(String[] args) {
-        System.out.println(max(3, 8));    // 8
-        System.out.println(max(10, 2));   // 10
-        System.out.println(max(5, 5));    // 5
-        System.out.println(max(-4, -9));  // -4
+        for (int i = 1; i <= 50; i++) {
+            if (isPrime(i)) {
+            System.out.println(i);}
+        }
     }
 }
