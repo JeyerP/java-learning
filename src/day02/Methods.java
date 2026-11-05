@@ -28,6 +28,14 @@ public class Methods {
             System.out.println(n + " * " + i + " = " + (n * i));
         }
     }
+    static int max(int a, int b, int c) {
+        int biggerOfBC = max(b, c);
+        if (a > biggerOfBC) {
+            return a;
+        } else  {
+            return biggerOfBC;
+        }
+    }
 
     public static void main(String[] args) {
         System.out.println(max(3, 8));    // 8
