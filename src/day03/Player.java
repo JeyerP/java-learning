@@ -22,4 +22,12 @@ public class Player {
             health = 0;
         }
     }
+    boolean isAlive() {
+        if (health > 0) {
+            return true;
+        }
+        else  {
+            return false;
+        }
+    }
 }
