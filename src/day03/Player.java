@@ -13,7 +13,13 @@ public class Player {
     void printInfo() {
         System.out.println(this.name + ": здоровье " + this.health + ", золото " + this.gold);
     }
-
-    // TODO 2: метод printInfo() без static, который печатает
-    // строку вида: Steve: здоровье 100, золото 0
+    void addGold(int amount) {
+        gold += amount;
+    }
+    void takeDamage(int amount) {
+        health -= amount;
+        if (health <= 0) {
+            health = 0;
+        }
+    }
 }
