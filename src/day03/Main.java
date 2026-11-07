@@ -6,8 +6,8 @@ public class Main {
         Player alex = new Player("Alex");
 
         while (steve.isAlive() && alex.isAlive()) {
-            alex.takeDamage(10);
-            steve.takeDamage(10);
+            steve.attack(alex, 12);
+            alex.attack(steve, 9);
             steve.printInfo();
             alex.printInfo();
         }
