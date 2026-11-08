@@ -23,6 +23,7 @@ public class BattleRoyale {
                 attacker.attack(target, damage);
                 if (!target.isAlive()) {
                     System.out.println(target.name + " погиб");
+                    attacker.addGold(10);
                 }
             }
         }
@@ -30,5 +31,11 @@ public class BattleRoyale {
         for (Player player : players) {
             player.printInfo();
         }
+        for (Player player : players) {
+            if (player.isAlive()) {
+                System.out.println("Победитель:" + player.name);
+            }
+        }
+        System.out.println("Самый богатый: " + Arena.findRichest(players).name);
     }
 }
