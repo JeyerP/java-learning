@@ -35,7 +35,7 @@ public class Player {
     }
 
     void attack(Player target, int damage) {
-        System.out.println(this.name + " бьёт " + target.name + "на" + damage);
+        System.out.println(this.name + " бьёт " + target.name + " на " + damage);
         target.takeDamage(damage);
     }
 }
